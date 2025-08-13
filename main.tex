@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author: Jason Nguyen
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\miscItem}[2]{
+\item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItem}[1]{
+\item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\miscItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*]}
+    \newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Jason Nguyen} & Email: mrboom192@gmail.com \\
+  Oklahoma City, OK & Mobile: +1 (405) 436-9920 \\
+\end{tabular*}
+
+\vspace{4pt}
+\noindent
+\small
+\textit{Computer Science student at the University of Oklahoma, experienced in building production web and mobile apps with React, Next.js, TypeScript, and Python, leveraging AWS, Google Cloud, and modern design practices for scalable, user-focused solutions.}
+\normalsize
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{The University of Oklahoma}{Norman, OK}
+{B.S./M.S. in Computer Science (Accelerated); GPA: 3.72/4.0}{Aug. 2022 -- Dec. 2026}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Earthly}{Charlotte, NC}
+{Full-Stack Developer}{Jul. 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Developed company website (earthly.us) with Next.js, using AWS Amplify for CI/CD and hosting, contributing to business growth and increasing job applications by $\sim$20\%.}
+\resumeItem{Built mobile applications using React Native and TypeScript, integrated with AWS Amplify for CI/CD deployment.}
+\resumeItem{Implemented AWS Lambda functions to automate email campaign signups and created marketing images/videos in Blender, storing and delivering them via AWS S3 for product pages and promotional campaigns.}
+\resumeItem{Integrated Google Places API to provide location-based services, enabling customers to find the closest physical store.}
+\resumeItemListEnd
+
+\resumeSubheading
+{DRX Genius LLC}{Allen, TX}
+{Full-Stack Engineer}{Jan. 2025 -- Aug. 2025}
+\resumeItemListStart
+\resumeItem{Led development of a modernized iteration of the company's DrX Telehealth app from concept to launch on Google Play and Apple App Store, using React Native, Expo, TypeScript, Google Cloud, and Firebase.}
+\resumeItem{Redesigned and modernized the app's UI/UX in Figma, improving usability and visual appeal, resulting in reduced user complaints and support requests by $\sim$25\% and increased downloads across app stores by $\sim$15\%.}
+\resumeItem{Implemented secure WebRTC video conferencing with Cloudflare-powered signaling servers, replacing a third-party API and reducing video conferencing costs by $\sim$50\%; developed real-time patient-doctor chat and integrated Stripe payments.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Gametime Rehab}{Norman, OK}
+{Mobile Developer}{Dec. 2024 -- Feb. 2025}
+\resumeItemListStart
+\resumeItem{Delivered a MVP with a library of 3,000+ rehab exercises using React Native, Expo, and Firebase as well as  implementing Python Playwright scrapers to automate data collection and processing.}
+\resumeItemListEnd
+
+\resumeSubheading
+{UFLIP}{Oklahoma City, OK}
+{Software Engineer Intern}{Feb. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Designed production-ready interfaces in Figma and developed inventory, admin, and staff management apps with JavaScript and Next.js, streamlining workflows and supporting company growth.}
+\resumeItem{Integrated frontend with backend via Apollo (GraphQL) and Nhost (Hasura), enabling seamless real-time data fetching and reducing API response latency by $\sim$20\%.}
+\resumeItem{Led SCRUM meetings and coordinated cross-team efforts to ensure timely project delivery.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Roblox Game Automation}
+{Developed a Python-based computer vision system to automate in-game actions by collecting and labeling images with CVAT and training a YOLOv8 model to detect UI elements.}
+\resumeSubItem{Game Modding}
+{Developed a mod for the game \textit{Ravenfield} with C\# and Lua, implementing pathfinding and custom weapon, vehicle, and AI behaviors, converted assets via Blender and Python batch scripts for Unity integration. The mod earned 460+ ratings, 32,430+ subscribers, and 1,280+ favorites in the Steam Workshop, making it a one of the more popular mods for the game.}
+\resumeSubItem{MyJournal \& CalPal}
+{Developed full-stack productivity apps for school including \textit{MyJournal} (TypeScript/React Native/Expo, Firebase) with authentication, streaks, and gamification, and \textit{CalPal} (React, Next.js, Express/Node.js) with calendar, friends list, and API integrations for group coordination.}
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------------
+\section{Leadership}
+\resumeSubHeadingListStart
+\resumeSubheading
+{OU UX Design Club}{Norman, OK}
+{Club Executive; Workshop Coordinator \& Web Developer}{May 2024 -- Present}
+\resumeItemListStart
+\resumeItem
+{Led design workshops on strategy, fundamentals, and Figma; designed club website and collaborated with club members to build and deploy a responsive UX.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS------------
+\section{Skills and Awards}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}
+{Java, C\#, C++, JavaScript (ES6+), TypeScript, Python, HTML/CSS, SQL, PostgreSQL, GraphQL, Kotlin, Flutter, Lua}
+\resumeSubItem{Tools}
+{Git, Docker, Firebase, Amazon AWS, Google Cloud, Cloudflare, CVAT, YOLOv8, Playwright, Nhost, Hasura, Figma, Photoshop, Blender, Microsoft Azure DevOps, Unity}
+\resumeSubItem{Frameworks}
+{Next.js, React, React Native, Expo, Express, Redux, Zustand, Apollo}
+\resumeSubItem{Awards}
+{Award of Excel RTW (High GPA), granted to students scoring 32+ on the ACT.}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
